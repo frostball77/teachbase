@@ -1,33 +1,23 @@
 puts "vvedite 1 storony treugolnika"
-storona1 = gets.chomp.to_i
+side1 = gets.chomp.to_f
 
 puts "vvedite 2 storony treugolnika"
-storona2 = gets.chomp.to_i
+side2 = gets.chomp.to_f
 
 puts "vvedite 3 storony treugolnika"
-storona3 = gets.chomp.to_i
+side3 = gets.chomp.to_f
 
 
-if storona1 > storona2 && storona1 > storona3
-storona1**2 == ((storona2**2)+(storona3**2))
-  puts "vash treugolnik pryamougolnyi"  
-  
-elsif storona2 > storona1 && storona2 > storona3
-storona2**2 == ((storona1**2)+(storona3**2))
-  puts "vash treugolnik pryamougolnyi" 
 
-elsif storona3 > storona2 && storona3 > storona1
-storona3**2 == ((storona1**2)+(storona2**2))
-  puts "vash treugolnik pryamougolnyi" 
-
-elsif storona1 == storona2 && storona2 == storona3
-  puts "vash treugolnik ravnostoronnii, no ne pryamougolnyi"   
+if side1 == side2 or side2 == side3 or side1 == side3
+  puts "treugolnik ravnobedrenyi"
+elsif side1**2 == side2**2 + side3**2 or side2**2 == side1**2 + side3**2 or side3**2 == side1**2 + side2**2
+  puts "treugolnik pryamougonyi"
+else
+  puts "treugolnik obycnyi"
 end
+  
 
-if storona1 == storona2 || storona2 == storona3 || storona1 == storona3
-  puts "vash treugolnik ravnobedrenyi"
-else 
-  puts "vash treugolnik neravnobedrennii"    
-end  
-
-
+if side1 == side2 and side2 == side3 
+  puts "vash treugolnik ne pryamougonyi"
+end

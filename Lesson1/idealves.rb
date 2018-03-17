@@ -1,10 +1,10 @@
 puts "vvedite vash rost"
-height = gets.chomp
+height = gets.chomp.to_i
 
 puts "vvedite vashe imya"
 name = gets.chomp.capitalize
 
-ideal_weight = height.to_i-110
+ideal_weight = height - 110
 if ideal_weight < 0 
   puts "#{name} vash ves uzhe optimalen"
 else 
