@@ -15,8 +15,8 @@ if d > 0
   x2 = -b + v / 2 * a
   puts "Vashi korni #{x1} i #{x2} "
 elsif d == 0
-  x1 = x2 = -b / 2*a
+  x1 = -b / 2 * a
   puts "U vas odin koren i on raven #{x1}"
-else d < 0
+else 
   puts "kornei net"
 end
